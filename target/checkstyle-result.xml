@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.45.1">
+<file name="/home/kali2/demo-app/demo-docker-pipeline/src/main/java/com/ugur007/App.java">
+</file>
+<file name="/home/kali2/demo-app/demo-docker-pipeline/src/test/java/com/ugur007/AppTest.java">
+</file>
+</checkstyle>
