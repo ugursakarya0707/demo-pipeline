@@ -8,8 +8,8 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# 4. Projeyi derle ve JAR dosyasını oluştur
-
+# 4. Maven ile projeyi build et
+RUN mvn clean package -DskipTests
 
 # 5. Daha hafif bir Java runtime kullanarak çalıştırılabilir imaj oluştur
 FROM eclipse-temurin:17-jdk
