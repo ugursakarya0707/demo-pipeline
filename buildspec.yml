@@ -15,10 +15,10 @@ phases:
       - ECR_IMAGE_URI="${ECR_MAIN_URI}/${ECR_REPO_NAME}:${CODEBUILD_RESOLVED_SOURCE_VERSION:0:8}"
   build:
     commands:
-      - docker build -t my-quickstart-app:latest .
+      - docker build -t ecr-demo-app:latest .
   post_build:
     commands:
-      - docker tag my-quickstart-app:latest ${ECR_IMAGE_URI}
+      - docker tag ecr-demo-app:latest ${ECR_IMAGE_URI}
       - docker push ${ECR_IMAGE_URI}
 
       # Generate image definitions file for ECS
