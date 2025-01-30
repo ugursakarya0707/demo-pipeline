@@ -1,5 +1,5 @@
 # 1. Maven tabanlı bir build aşaması
-FROM maven:3.9.4-eclipse-temurin-17 AS builder
+FROM public.ecr.aws/docker/library/maven:3.9.4-eclipse-temurin-17 AS builder
 
 # 2. Çalışma dizini oluştur
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # 5. Daha hafif bir Java runtime kullanarak çalıştırılabilir imaj oluştur
-FROM eclipse-temurin:17-jdk
+FROM public.ecr.aws/docker/library/eclipse-temurin:17-jdk
 
 # 6. Çalışma dizini
 WORKDIR /app
